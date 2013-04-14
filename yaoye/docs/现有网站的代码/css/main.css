@@ -1,0 +1,182 @@
+/*
+  960 Grid System ~ Core CSS.
+  Learn more ~ http://960.gs/
+
+  Licensed under GPL and MIT.
+*/
+
+/*
+  Forces backgrounds to span full width,
+  even if there is horizontal scrolling.
+  Increase this if your layout is wider.
+
+  Note: IE6 works fine without this fix.
+*/
+
+#main {
+  width: 940px;
+  height:auto;
+  margin:0 auto;
+  background-color:black;
+  display: block;
+}
+#banner{
+    width:920px;
+    height:300px;
+    left:0px;
+    margin-left:0px;
+    padding:10px;
+    background:#F2F2F1;
+}
+.slogan{
+    font-weight:bold;
+    width:940px;
+    height:40px;
+    font-size:30px;
+}
+/* tab*/
+.usual {
+    background: none repeat scroll 0 0 #181818;
+    border-bottom: 1px solid #222222;
+    color: #111111;
+}
+.usual li {
+    float: left;
+    list-style: none outside none;
+	
+}
+.usual ul a {
+    background: none repeat scroll 0 0 #444444;
+    color: #FFFFFF;
+    display: block;
+    margin: 1px 1px 1px 0;
+    padding: 6px 10px;
+    text-decoration: none !important;
+}
+.usual ul a:hover {
+    background: none repeat scroll 0 0 #111111;
+    color: #FFFFFF;
+}
+.usual ul a.selected {
+    background: none repeat scroll 0 0 snow;
+    border-bottom: 1px solid snow;
+    color: #000000;
+    cursor: default;
+    margin-bottom: 0;
+}
+.usual div {
+    
+}
+.usual div a {
+    color: #000000;
+    font-weight: bold;
+}
+.usual_conten_menu{
+}
+/* 高度定义*/
+.height80 {height:80px;}
+.height90 {height:90px;}
+.height100{height:100px;}
+.height110{height:110px;}
+.height120{height:120px;}
+.height130{height:130px;}
+.height140{height:140px;}
+.height150{height:150px;}
+.height160{height:160px;}
+.height170{height:170px;}
+.height180{height:180px;}
+.height190{height:190px;}
+.height200{height:200px;}
+.height210{height:210px;}
+.height220{height:220px;}
+.height230{height:230px;}
+.height240{height:240px;}
+.height250{height:250px;}
+.height260{height:260px;}
+.height270{height:270px;}
+.height280{height:280px;}
+.height290{height:290px;}
+.height300{height:300px;}
+.height310{height:310px;}
+.height320{height:320px;}
+.height330{height:330px;}
+.height340{height:340px;}
+.height350{height:350px;}
+.height360{height:360px;}
+.height370{height:370px;}
+.height380{height:380px;}
+.height390{height:390px;}
+.height400{height:400px;}
+.height410{height:410px;}
+.height420{height:420px;}
+.height430{height:430px;}
+.height440{height:440px;}
+.height450{height:450px;}
+.height460{height:460px;}
+.height470{height:470px;}
+.height480{height:480px;}
+.height490{height:490px;}
+.height500{height:500px;}
+.height510{height:510px;}
+.height520{height:520px;}
+.height530{height:530px;}
+.height540{height:540px;}
+.height550{height:550px;}
+.height560{height:560px;}
+.height570{height:570px;}
+.height580{height:580px;}
+.height590{height:590px;}
+.height600{height:600px;}
+.height610{height:610px;}
+.height620{height:620px;}
+.height630{height:630px;}
+.height640{height:640px;}
+.height650{height:650px;}
+.height660{height:660px;}
+.height670{height:670px;}
+.height680{height:680px;}
+.height690{height:690px;}
+.height700{height:700px;}
+.height710{height:710px;}
+.height720{height:720px;}
+.height730{height:730px;}
+.height740{height:740px;}
+.height750{height:750px;}
+.height760{height:760px;}
+.height770{height:770px;}
+.height780{height:780px;}
+.height790{height:790px;}
+.height800{height:800px;}
+.height810{height:810px;}
+.height820{height:820px;}
+.height830{height:830px;}
+.height840{height:840px;}
+.height850{height:850px;}
+.height860{height:860px;}
+.height870{height:870px;}
+.height880{height:880px;}
+.height890{height:890px;}
+.height900{height:900px;}
+.height910{height:910px;}
+.height920{height:920px;}
+.height930{height:930px;}
+.height940{height:940px;}
+.height950{height:950px;}
+.height960{height:960px;}
+.height970{height:970px;}
+.height980{height:980px;}
+.height990{height:990px;}
+
+/* 定义颜色*/
+.green{background:#6AA63B;}
+.yellow{background:#FBC700;}
+.red{background:#D52100;}
+.purple{background:#5122B4;}
+.blue{background:#0292C0;}
+.whitesmoke{background:#F5F5F5;}
+.ghostwhite{background:#F8F8FF;}
+/*定义边框 */
+.borderRight{border-right:1px solid #222;}
+.borderLeft  {border-left:1px solid #222; margin-left:0px;}
+.borderTop  {border-top:1px solid #222; margin-top:0px;}
+.borderBottom  {border-bottom:1px solid #222; margin-bottom:0px;}

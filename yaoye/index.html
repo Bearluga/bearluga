@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+  <meta charset="utf-8">
+  <title>Bootstrap, from Twitter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+  <!-- Le styles -->
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+  <style type="text/css">
+
+  @media (max-width: 980px) {
+    /* Enable use of floated navbar text */
+    .navbar-text.pull-right {
+      float: none;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+  height: 60px;
+}
+#footer {
+  background-color: #f5f5f5;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.nav-header{
+  font-size: 14px;
+}
+.nav-header i{
+  transition: transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+}
+
+.nav-header:focus, .nav-header:hover{
+  text-decoration: none;
+  background-color: #eeeeee;
+  cursor:pointer;
+}
+
+
+.upsidedown{
+  transform:rotate(180deg);
+  -ms-transform:rotate(180deg); /* Internet Explorer */
+  -moz-transform:rotate(180deg); /* Firefox */
+  -webkit-transform:rotate(180deg); /* Safari and Chrome */
+  -o-transform:rotate(180deg); /* Opera */
+}
+
+.yy-nav-list div{
+  text-indent: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 15px;
+  padding-right: 15px; 
+}
+.yy-nav-list a{
+  cursor:pointer;
+}
+.yy-nav-list{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.nav li a:hover, .nav li a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+  outline:0px;
+}
+
+.nav-list li a {
+  padding: 3px 15px;
+  margin-right: -15px;
+  margin-left: -15px;
+  display: block;
+}
+
+.nav-list  .active  a, .nav-list  .active  a:hover, .nav-list  .active  a:focus {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #0088cc;
+}
+.nav li + .nav-header {
+  margin-top: 0px;
+}
+
+/* bobbys */
+.sidebar-nav {
+  padding: 9px 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.row-fluid .span3{
+  position: fixed;
+}
+
+.row-fluid .offset3.fakefirstchild{
+  margin-left: 25.53191489361702%;
+}
+
+@media (max-width: 979px){
+  .row-fluid > .span3{
+    position: static;
+  }
+}
+@media (max-width: 979px) and (min-width: 768px){
+  .row-fluid .offset3.fakefirstchild{
+    margin-left: 2.127659574468085%;
+  }
+}
+@media (max-width: 768px){
+  .row-fluid .offset3.fakefirstchild{
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 979px) {
+  #main-content{
+    padding-top: 60px;
+  }
+}
+
+.span9{
+  position: relative;
+}
+
+.yy-loading{
+  display: none;  
+}
+
+.yy-loading.yy-in-progress{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  top: 0px;
+  background: rgba(255, 255, 255, 0.8) url("img/loading.gif") no-repeat center center;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.yy-content-area{
+  padding: 19px;
+}
+.yy-content-area.yy-in-progress{
+  position: relative;
+}
+#iscroll-wrapper{
+  height: 500px;
+  overflow: hidden;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+}
+#iscroll-wrapper .yy-veritically-center{
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  opacity: 0;
+}
+
+.yy-content-area p.indent{
+  text-indent: 28px;
+}
+
+.yy-content-area p.double-space{
+  line-height: 20px;
+}
+
+
+.yy-veritically-center{
+  transition: top 0.5s, opacity 0.5s;
+  -moz-transition: top 0.5s, opacity 0.5s;
+  -webkit-transition: top 0.5s, opacity 0.5s;
+  -o-transition: top 0.5s, opacity 0.5s;
+}
+.yy-veritically-center.adjustMargin{
+  transition: top 0.5s, opacity 0.5s, margin 0.5s;
+  -moz-transition: top 0.5s, opacity 0.5s, margin 0.5s;
+  -webkit-transition: top 0.5s, opacity 0.5s, margin 0.5s;
+  -o-transition: top 0.5s, opacity 0.5s, margin 0.5s;
+}
+
+body{
+  background-image: url("img/knitting250px.png");
+}
+
+#footer p{
+  height: 58px;
+  line-height: 58px;
+  margin: 0;
+}
+
+.pager{
+  position: absolute;
+  width: 98%;
+  opacity: 0.5;
+  bottom: 40px;
+  margin: 0px 1%;
+  height: 0;
+}
+.pager{
+  transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+}
+.pager li > a{
+  background-color: white;
+  color:#0088cc;
+  transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+}
+.pager li > a:hover{
+  color: white;
+  background-color: #0088cc;
+}
+.pager:hover{
+  opacity: 1;
+}
+.yy-content-area img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+
+</style>
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <![endif]-->
+
+      <!-- Fav and touch icons -->
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+      <link rel="shortcut icon" href="../assets/ico/favicon.png">
+
+    </head>
+
+    <body>
+      <div id="wrap">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container-fluid">
+              <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="brand" >数字工厂</a>
+              <div class="nav-collapse collapse">
+                <p class="navbar-text pull-right">
+                  Logged in as <a  class="navbar-link">Username</a>
+                </p>
+                <ul class="nav">
+                  <li class="active"><a >Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </div><!--/.nav-collapse -->
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid" id="main-content">
+          <div class="row-fluid">
+            <div class="span3">
+              <div class="well sidebar-nav">
+                <ul class="yy-nav-list nav nav-list">
+                  <!-- <li class="nav-header">Sidebar</li> -->
+                  <li class="nav-header"><a id='yy-nav-homelink' data-link="html/home/home.htm">首页</a></li>
+                  <li class="nav-header" data-toggle="collapse" data-target="#solution"><a  data-link="html/solutions/solution.htm">解决方案   <i class="icon-chevron-down"></i></a></li>
+                  <div id="solution" class="collapse">
+                    <li><a  data-link="html/solutions/color-print.htm">彩印行业解决方案</a></li>
+                    <li><a  data-link="html/solutions/med.htm">制药行业GMP解决方案</a></li>
+                    <li><a  data-link="html/solutions/production.html">装备制造行业解决方案</a></li>
+                    <li><a  data-link="html/solutions/electronics.htm">电子器件行业解决方案</a></li>
+                    <li><a  data-link="html/solutions/seamline.htm">流水线型生产企业解决方案</a></li>
+                    <li><a  data-link="html/solutions/patent.htm">防伪防窜货解决方案</a></li>
+                  </div>
+                  <li class="nav-header" data-toggle="collapse" data-target="#ux"><a  data-link="html/ux/ux-home.html">用户体验   <i class="icon-chevron-down"></i></a></li>
+                  <div id="ux" class="collapse">
+                    <li><a data-link="html/ux/solve-issues.html">解决问题</a></li>
+                    <li><a  data-link="html/ux/create-value.htm">创造价值</a></li>
+                    <li><a  data-link="html/ux/usage.htm">使用方法</a></li>
+                    <li><a  data-link="html/ux/product-experience.html">产品体验</a></li>
+                  </div>
+                  <li class="nav-header" data-toggle="collapse" data-target="#theory">理论实践  <i class="icon-chevron-down"></i></li>
+                  <div id="theory" class="collapse">
+                    <li><a  data-link="html/theory/core.html">产品核心</a></li>
+                    <li><a  data-link="html/theory/function.html">功能内涵</a></li>
+                    <li><a  data-link="html/theory/exttech.htm">外延技术</a></li>
+                  </div>
+                  <li class="nav-header" data-toggle="collapse" data-target="#about">关于我们  <i class="icon-chevron-down"></i></li>
+                  <div id="about" class="collapse">
+                    <li><a  data-link="html/about/company.htm">公司介绍</a></li>
+                    <li><a  data-link="html/about/contact.htm">联系方式</a></li>
+                    <li><a  data-link="html/about/recruit.htm">招贤纳士</a></li>
+                  </div>
+                </ul>
+              </div><!--/.well end nav -->
+
+        <ul class="nav nav-list affix" id="content-yy-sidenav">
+          <li><a href="#overview"><i class="icon-chevron-right"></i> Overview</a></li>
+          <li><a href="#barcode"><i class="icon-chevron-right"></i> 条形码技术</a></li>
+          <li><a href="#pad"><i class="icon-chevron-right"></i> 平板电脑（PAD）技术</a></li>
+          <li><a href="#control"><i class="icon-chevron-right"></i> 光声控技术</a></li>
+          <li><a href="#wireless"><i class="icon-chevron-right"></i> 无线通信技术</a></li>
+          <li><a href="#plc"><i class="icon-chevron-right"></i> PLC技术</a></li>
+          <li><a href="#rfid"><i class="icon-chevron-right"></i> 无线射频（RFID）技术</a></li>
+        </ul>
+
+
+            </div><!--/span3-->
+
+            <div class="span9 offset3 fakefirstchild">
+              <div id="iscroll-wrapper">
+                <div class="yy-content-area yy-in-progress">
+                </div>
+                <div class="yy-loading yy-in-progress"></div>
+              </div>
+                              <ul class="pager">
+  <li class="previous">
+    <a href="#"><i class="icon-chevron-left"></i></a>
+  </li>
+  <li class="next">
+    <a href="#"><i class="icon-chevron-right"></i></a>
+  </li>
+</ul>
+  
+            </div><!--/span-->
+          </div><!--/row-->
+        </div><!--/.fluid-container-->
+
+        <div id="push"></div>
+
+      </div>
+
+      <div id="footer">
+        <div class="container">
+
+          <p class="muted text-center credit">©2013 海诚普仕 EST. SINCE 1997</p>
+        </div>
+      </div>
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="jQuery/jquery-1.9.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/presenter.js"></script>
+    <script src="js/iscroll.js"></script>
+  </body>
+  </html>
