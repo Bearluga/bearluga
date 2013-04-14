@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>剪贴板超文本内容转换为UBB代码工具</title>
+<script Language="JavaScript1.2" defer>
+if (window.Event) 
+　document.captureEvents(Event.MOUSEUP); 
+function nocontextmenu() {
+ event.cancelBubble = true
+ event.returnvalue = false;
+ return false;
+}
+function norightclick(e) {
+ if (window.Event) {
+　if (e.which == 2 || e.which == 3)
+　 return false;
+ } else if (event.button == 2 || event.button == 3) {
+　 event.cancelBubble = true
+　 event.returnvalue = false;
+　 return false;
+ } 
+}
+document.oncontextmenu = nocontextmenu;　// for IE5+
+document.onmousedown = norightclick;　　 // for all others
+rtf.document.designMode="On";
+function html_trans(str) {
+	str = str.replace(/\r/g,"");
+	str = str.replace(/on(load|click|dbclick|mouseover|mousedown|mouseup)="[^"]+"/ig,"");
+	str = str.replace(/<script[^>]*?>([\w\W]*?)<\/script>/ig,"");
+	str = str.replace(/<style[^>]*?>([\w\W]*?)<\/stylet>/ig,"");
+	str = str.replace(/<embed[^>]*?>([\w\W]*?)<\/embed>/ig,"");
+	
+	str = str.replace(/<a[^>]+href="([^"]+)"[^>]*>(.*?)<\/a>/ig,"[url=$1]$2[/url]");
+	str = str.replace(/<font[^>]+color=([^ >]+)[^>]*>(.*?)<\/font>/ig,"[color=$1]$2[/color]");
+	str = str.replace(/<img[^>]+src="([^"]+)"[^>]*>/ig,"[img]$1[/img]");
+	str = str.replace(/<param NAME="Movie" value="([^>"]+\.swf)"[^>]*>/ig,"[flash]$1[/flash]");
+	
+	str = str.replace(/<([\/]?)b>/ig,"[$1b]");
+	str = str.replace(/<([\/]?)strong>/ig,"[$1b]");
+	str = str.replace(/<([\/]?)u>/ig,"[$1u]");
+	str = str.replace(/<([\/]?)i>/ig,"[$1i]");
+	
+	str = str.replace(/&nbsp;/g," ");
+	str = str.replace(/&amp;/g,"&");
+	str = str.replace(/&quot;/g,"\"");
+	str = str.replace(/&lt;/g,"<");
+	str = str.replace(/&gt;/g,">");
+	
+	str = str.replace(/<br>/ig,"\n");
+	str = str.replace(/<[^>]*?>/g,"");
+	str = str.replace(/\[url=([^\]]+)\](\[img\]\1\[\/img\])\[\/url\]/g,"$2");
+	str = str.replace(/\n+/g,"\n");
+	
+	return str;
+}
+function trans(){
+	var str = "";
+	rtf.focus();
+	rtf.document.body.innerHTML = "";
+	rtf.document.execCommand("paste");
+	str = rtf.document.body.innerHTML;
+	if(str.length == 0) {
+		alert("剪帖版不存在超文本数据！");
+		return "";
+	}
+	return html_trans(str);
+}
+function ExpSel(pic)
+{
+if (opener.document.yimxu.content.currPos) //如果对象obj存在属性currPos
+	opener.document.yimxu.content.currPos.text=pic;
+else
+	opener.document.yimxu.content.value+=pic;
+}
+</script>
+</head>
+<body style="font-size:12px" bgcolor=ThreedFace>
+<textarea style="width:100%; height:290px" id="text" onbeforepaste="if(document.getElementById('x_paste').checked){window.clipboardData.setData('text',trans());this.focus();}"></textarea><br />
+<iframe scrolling="no" id="rtf" src="about:blank" MARGINHEIGHT="0" MARGINWIDTH="0" style="width:0px; height:0px;"></iframe><br><img name="" src="" width="1" height="5" alt=""><br>
+<input type="button" value="剪贴板超文本内容转换为UBB代码" onclick="document.getElementById('text').value += trans()"> <input type="button" value="确定" onclick="ExpSel(document.getElementById('text').value);window.close();opener.document.yimxu.content.focus();">
+<input type="checkbox" id="x_paste"><label for="x_paste">粘贴时自动转换剪贴板超文本内容为UBB代码</label>
+<br>
+<br>
+使用说明<br>
+<br>
+1.在别的网页中选择HTML内容，比如有链接，或者颜色的拷贝。将源代码复制 <br>
+2.点击"粘贴时自动转换剪贴板超文本内容为UBB代码"按钮,自动转换 <br>
+3.出来的就是论坛专用的 ubb 代码了。某些情况下可能需要手动作些调整.<br>
+</body>
+</html>

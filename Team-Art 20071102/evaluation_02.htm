@@ -1,0 +1,102 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>evaluation c01</title>
+</head>
+
+<body>
+<script language="JavaScript">
+document.oncontextmenu=new Function("event.returnValue=false;");
+document.onselectstart=new Function("event.returnValue=false;");
+</script>
+
+<noscript> 
+<iframe src="*.htm"></iframe> 
+</noscript>
+
+<STYLE type=text/css>.hair {
+	BACKGROUND-COLOR: "#cc6600"; FONT-SIZE: 1px; HEIGHT: 1px; LEFT: 0px; POSITION: absolute; TOP: 0px; WIDTH: 1px; layer-background-color: "#cc6600"}
+</STYLE>
+<DIV class=hair id=xhair></DIV>
+<DIV class=hair id=yhair></DIV>
+<DIV id=target 
+style="HEIGHT: 32px; LEFT: 12px; POSITION: absolute; TOP: 0px; WIDTH: 722px"> </DIV>
+<SCRIPT language=javascript>
+var isNS=(navigator.appName=="Netscape");
+var _all=(isNS)? '' : 'all.' ;
+var _style=(isNS)? '' : '.style' ;
+var _visible=(isNS)? 'show' : 'visible';
+
+var xhair=eval('document.'+_all+'xhair'+_style);
+var yhair=eval('document.'+_all+'yhair'+_style);
+var target=eval('document.'+_all+'target'+_style);
+
+function resize(){
+if(isNS){
+xhair.clip.width=window.innerWidth;
+xhair.clip.height=1;
+yhair.clip.width=1;
+yhair.clip.height=window.innerHeight;
+}else{
+xhair.width=document.body.clientWidth;
+yhair.height=document.body.clientHeight;
+}}
+
+function movehair(evnt){
+if(isNS){
+xhair.moveTo(pageXOffset,evnt.pageY);
+yhair.moveTo(evnt.pageX,pageYOffset);
+target.moveTo(evnt.pageX-20,evnt.pageY-20);
+}else{
+xhair.pixelTop=event.clientY+document.body.scrollTop;
+xhair.pixelLeft=document.body.scrollLeft;
+yhair.pixelLeft=event.clientX+document.body.scrollLeft;
+yhair.pixelTop=document.body.scrollTop;
+target.pixelTop=event.clientY+document.body.scrollTop-20;
+target.pixelLeft=event.clientX+document.body.scrollLeft-20;
+}
+return false;
+}
+
+function reloadNS(){
+setTimeout('window.location.reload()', 500);
+}
+
+(isNS)? window.onresize=reloadNS : window.onresize=resize;
+
+if(isNS)document.captureEvents(Event.MOUSEMOVE);
+document.onmousemove=movehair;
+
+window.onload=resize;
+
+</SCRIPT>
+
+
+<div align="center">
+	<table border="1" width="800" bordercolor="#C0C0C0" id="table1" style="border-collapse: collapse">
+		<tr>
+			<td width="798" height="28">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="evaluation_03.htm" style="text-decoration: none">
+			<font size="2" color="#000000">&nbsp; </font></a><font size="2">
+			<a target="_blank" style="text-decoration: none" href="evaluation_03.htm">
+			<font color="#000000">评估模块</font></a></font></td>
+		</tr>
+		<tr>
+			<td width="798">
+	<map name="FPMap0">
+	<area target="_blank" alt="通过专业评估工具，依据咨询师对国内组织长期咨询与实践的经验，立足于企业未来生存与发展，针对组织结构、制度体系、管理流程、组织文化、团队效果等进行诊断，针对现实问题挖掘深层原因，阐明相互影响关系，提出初步处理建议。" coords="516, 119, 90" shape="circle" href="evaluation_03.htm">
+	<area target="_blank" alt="团队有效性评估    通过天慕众和自行开发的具备国际先进水平的评估工具，通过对团队内多指标维度的测评，量化出团队有效性的结论，帮助组织找到团队建设中的优势和劣势并提供改进方向。" href="evaluation_03.htm" shape="circle" coords="349, 217, 91">
+	<area target="_blank" alt="能力评估      通过有效的测评工具，对组织内的各层级人员目前及潜在的胜任素质能力进行评估，为人员晋升、储备和接替计划、淘汰机制等人力资源异动提供决策依据。" href="evaluation_03.htm" shape="circle" coords="686, 217, 92">
+	<area target="_blank" alt="甄选评估      依据评估工具与咨询师丰富的实践经验，对组织的招聘甄选程序与方法的有效性进行评估，帮助组织找出影响招聘质量的“短板”，提供改进方案。" href="evaluation_03.htm" shape="circle" coords="347, 414, 93">
+	<area target="_blank" alt="并购、重组之人力资源尽职调查      通过专业的人力资源状况评估工具和科学的评价方法，对于将要进行并购和重组的目标组织的人力资源状况（包括数量、质量、成本、文化等）进行评估分析，预测并购或重组后的风险，及交易完成后人力资源对后续经营的影响，为确定并购重组后的人力资源策略提供依据。" href="evaluation_03.htm" shape="circle" coords="519, 510, 94">
+	<area target="_blank" alt="职业倾向性评估      通过一系列测评工具包括心理测试工具和其他非标准评估方法，对组织内的个体的职业倾向进行测评，形成个人职业生涯规划的基础。" href="evaluation_03.htm" shape="circle" coords="686, 411, 94">
+	</map>
+	<img border="0" src="images/evaluation.jpg" width="796" height="604" usemap="#FPMap0"></td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

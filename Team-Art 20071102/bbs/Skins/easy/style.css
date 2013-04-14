@@ -1,0 +1,38 @@
+body {margin-left: 0px;margin-top: 0px;margin-right: 0px;margin-bottom: 0px;font-family:Verdana;font-size:9pt;scrollbar-face-color:'#DFE7EC';scrollbar-shadow-color:'#DFE7EC';scrollbar-highlight-color:'#DFE7EC';scrollbar-3dlight-color:'#BFCFDA';scrollbar-darkshadow-color: '#698FA8';scrollbar-track-color:'#F4F7F9';scrollbar-arrow-color:'#698FA8' ;}
+tr,td{font-family:Verdana;font-size:9pt;}
+input{FONT-SIZE: 9pt; LINE-HEIGHT: 15px;border-width: 1; border-color: #bfbfbf; FONT-FAMILY: Tahoma,Verdana,??им?;BACKGROUND: url(skins/input.gif)}
+a:link{text-decoration:none;color:#000000}
+a:visited{text-decoration:none;color:#000000}
+a:hover{text-decoration:none;color:#B3BBD0}
+input,select,textarea{Verdana; font-size: 9pt;}
+td{BORDER-TOP: 0px;}
+.caption {font-size: 11pt; COLOR: #ffffff; FILTER: glow(color=000000,strength=2) dropshadow(color=#aaaaaa,offx=1, offy=1, positive=2); HEIGHT: 20px; MARGIN: 0px; TEXT-DECORATION: none }
+
+.menuskin {
+	BORDER-RIGHT: #999999 1px solid;
+	BORDER-TOP: #eeeeee 1px solid;
+	BORDER-LEFT: #eeeeee 1px solid;
+	BORDER-BOTTOM: #999999 1px solid;
+	BACKGROUND-IMAGE: url(ShowMenu.Gif);
+	FILTER: alpha(opacity=85)progid:DXImageTransform.Microsoft.Shadow(Color=#999999,Direction=120,strength=4);
+	POSITION: absolute;
+	VISIBILITY: hidden;
+}
+.menuitems {
+	PADDING-RIGHT: 1px;
+	PADDING-TOP: 1px;
+	PADDING-LEFT: 1px;
+	PADDING-BOTTOM: 1px;
+	MARGIN: 2px;
+	font-size:9pt;
+	line-height:14pt;
+}
+#mouseoverstyle {
+	PADDING-RIGHT: 1px;
+	PADDING-LEFT: 1px;
+	PADDING-BOTTOM: 1px;
+	PADDING-TOP: 1px;
+	BACKGROUND-COLOR: #698CC3;
+}
+#mouseoverstyle A:hover {COLOR:ffffff;TEXT-DECORATION: none}
+.menuskin A {PADDING-RIGHT:10px;PADDING-LEFT:20px;}

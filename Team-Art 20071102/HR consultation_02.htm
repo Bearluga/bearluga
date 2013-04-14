@@ -1,0 +1,112 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>HR c-01</title>
+</head>
+
+<body>
+<script language="JavaScript">
+document.oncontextmenu=new Function("event.returnValue=false;");
+document.onselectstart=new Function("event.returnValue=false;");
+</script>
+
+<noscript> 
+<iframe src="*.htm"></iframe> 
+</noscript>
+
+<script language="JavaScript">
+document.oncontextmenu=new Function("event.returnValue=false;");
+document.onselectstart=new Function("event.returnValue=false;");
+</script>
+
+<noscript> 
+<iframe src="*.htm"></iframe> 
+</noscript>
+
+<STYLE type=text/css>.hair {
+	BACKGROUND-COLOR: "#cc6600"; FONT-SIZE: 1px; HEIGHT: 1px; LEFT: 0px; POSITION: absolute; TOP: 0px; WIDTH: 1px; layer-background-color: "#cc6600"}
+</STYLE>
+<DIV class=hair id=xhair></DIV>
+<DIV class=hair id=yhair></DIV>
+<DIV id=target 
+style="HEIGHT: 32px; LEFT: 60px; POSITION: absolute; TOP: -1px; WIDTH: 722px"> </DIV>
+<SCRIPT language=javascript>
+var isNS=(navigator.appName=="Netscape");
+var _all=(isNS)? '' : 'all.' ;
+var _style=(isNS)? '' : '.style' ;
+var _visible=(isNS)? 'show' : 'visible';
+
+var xhair=eval('document.'+_all+'xhair'+_style);
+var yhair=eval('document.'+_all+'yhair'+_style);
+var target=eval('document.'+_all+'target'+_style);
+
+function resize(){
+if(isNS){
+xhair.clip.width=window.innerWidth;
+xhair.clip.height=1;
+yhair.clip.width=1;
+yhair.clip.height=window.innerHeight;
+}else{
+xhair.width=document.body.clientWidth;
+yhair.height=document.body.clientHeight;
+}}
+
+function movehair(evnt){
+if(isNS){
+xhair.moveTo(pageXOffset,evnt.pageY);
+yhair.moveTo(evnt.pageX,pageYOffset);
+target.moveTo(evnt.pageX-20,evnt.pageY-20);
+}else{
+xhair.pixelTop=event.clientY+document.body.scrollTop;
+xhair.pixelLeft=document.body.scrollLeft;
+yhair.pixelLeft=event.clientX+document.body.scrollLeft;
+yhair.pixelTop=document.body.scrollTop;
+target.pixelTop=event.clientY+document.body.scrollTop-20;
+target.pixelLeft=event.clientX+document.body.scrollLeft-20;
+}
+return false;
+}
+
+function reloadNS(){
+setTimeout('window.location.reload()', 500);
+}
+
+(isNS)? window.onresize=reloadNS : window.onresize=resize;
+
+if(isNS)document.captureEvents(Event.MOUSEMOVE);
+document.onmousemove=movehair;
+
+window.onload=resize;
+
+</SCRIPT>
+
+
+<div align="center">
+	<table border="1" width="800" bordercolor="#C0C0C0" id="table1" style="border-collapse: collapse">
+		<tr>
+			<td width="798" height="28">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="HR%20consultation_03.php" style="text-decoration: none">
+			<font size="2" color="#000000">&nbsp;</font></a><font size="2"><a target="_blank" href="HR%20consultation_03.php" style="text-decoration: none"><font color="#000000">人力资源咨询服务模块</font></a>组成</font></td>
+		</tr>
+		<tr>
+			<td width="798"><map name="FPMap0">
+	<area target="_blank" alt="工作分析与岗位评估咨询      工作分析、岗位评估，针对岗位设置和工作分析形成任职资格描述。" href="HR%20consultation_03.php#工作分析与岗位评估咨询" shape="polygon" coords="438, 4, 506, 3, 554, 49, 554, 116, 507, 168, 441, 167, 393, 120, 392, 52">
+	<area target="_blank" alt="能力评估与甄选咨询    --评估解决方案咨询: 操作各层级人员能力评估和技能提升，评估晋升的内外部候选人资格，考查甄别现有员工对于不同管理层级的晋升潜力，加速未来管理者所需技能的提升和发展；--甄选咨询：评估并提高招聘程序的有效性，设计并实施更有效更低成本的甄选评估程序，提升新员工的行业兴趣，诊断影响招聘质量的“短板”，设计结构化面试以提高面试甄选的准确性。" coords="605, 79, 673, 79, 719, 122, 720, 185, 675, 234, 605, 235, 561, 193, 561, 126" shape="polygon" href="HR%20consultation_03.php#能力评估与甄选咨询">
+	<area target="_blank" alt="绩效管理咨询    --绩效管理培训，培训管理人员与员工设定目标和回顾绩效的方法；  --考核方案设计；    --绩效管理评估，从不同角度评估员工的绩效水平。" coords="681, 243, 744, 241, 791, 286, 793, 353, 745, 402, 679, 402, 635, 358, 634, 286" shape="polygon" href="HR%20consultation_03.php#绩效管理咨询">
+	<area target="_blank" alt="薪酬福利体系咨询    --根据组织内岗位评估结果和市场薪酬水平，建立或升级薪酬体系；    --中长期激励计划设计；    --福利方案设计。" coords="604, 409, 673, 408, 720, 455, 722, 519, 677, 569, 613, 569, 563, 524, 559, 455" shape="polygon" href="HR%20consultation_03.php#薪酬福利体系咨询">
+	<area target="_blank" alt="组织咨询    并购、重组过程中的人力资源管理咨询；组织、团队有效性评估与咨询；组织架构设计：根据战略目标进行组织结构设计；分支机构人力资源管理咨询：海内外分支机构人力资源管理策略与方法；组织发展咨询：诊断组织目前面临的问题、评估并改善组织行为；1+1&gt;2团队咨询：在分析团队成员的个性及技能的基础上，通过交互式的过程，使团队内个体成员之间更为理解、配合更为默契、沟通更加顺畅，从而达到团队更为卓越的绩效的目标；员工满意度调查：员工满意度调查及改进方案；企业文化咨询：设计或提升组织或团队文化。" href="HR%20consultation_03.php#组织咨询" shape="polygon" coords="270, 75, 333, 75, 385, 122, 384, 191, 338, 238, 271, 238, 221, 191, 221, 125">
+	<area target="_blank" alt="人力资源财务分析咨询    结合组织的战略目标、市场的薪酬水平、劳动生产率等因素，诊断人力资源投入产出合理性及提供解决方案。" href="HR%20consultation_03.php#人力资源财务分析咨询" shape="polygon" coords="202, 242, 267, 241, 316, 287, 318, 355, 270, 405, 203, 406, 155, 358, 153, 291">
+	<area target="_blank" alt="战略人力资源体系建设咨询    紧密结合组织的战略目标和价值观，确定人力资源战略、搭建合理的人力资源管理体系并具体推动实施，使组织适应瞬息万变的市场变化。" href="HR%20consultation_03.php#战略人力资源体系建设咨询" shape="polygon" coords="270, 413, 340, 413, 383, 456, 385, 524, 338, 573, 269, 573, 222, 526, 222, 456">
+	<area target="_blank" alt="人力资源开发咨询    培训咨询，培训课程，职业生涯管理—员工个人发展计划。" href="HR%20consultation_03.php#人力资源开发咨询" shape="polygon" coords="437, 478, 503, 478, 551, 526, 553, 592, 507, 642, 439, 642, 390, 594, 390, 527">
+	<area alt="点击查看人力资源各服务模块详解" target="_blank" href="HR%20consultation_03.php" shape="polygon" coords="411, 184, 531, 182, 615, 263, 617, 379, 534, 466, 417, 466, 330, 384, 327, 265">
+	</map>
+	<img border="0" src="images/consultation.jpg" width="794" height="645" usemap="#FPMap0"></td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

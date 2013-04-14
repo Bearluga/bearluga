@@ -1,0 +1,113 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>Trainning c01</title>
+</head>
+
+<body>
+<script language="JavaScript">
+document.oncontextmenu=new Function("event.returnValue=false;");
+document.onselectstart=new Function("event.returnValue=false;");
+</script>
+
+<noscript> 
+<iframe src="*.htm"></iframe> 
+</noscript>
+
+<STYLE type=text/css>.hair {
+	BACKGROUND-COLOR: "#cc6600"; FONT-SIZE: 1px; HEIGHT: 1px; LEFT: 0px; POSITION: absolute; TOP: 0px; WIDTH: 1px; layer-background-color: "#cc6600"}
+</STYLE>
+<DIV class=hair id=xhair></DIV>
+<DIV class=hair id=yhair></DIV>
+<DIV id=target 
+style="HEIGHT: 32px; LEFT: 102px; POSITION: absolute; TOP: 61px; WIDTH: 722px"> </DIV>
+<SCRIPT language=javascript>
+var isNS=(navigator.appName=="Netscape");
+var _all=(isNS)? '' : 'all.' ;
+var _style=(isNS)? '' : '.style' ;
+var _visible=(isNS)? 'show' : 'visible';
+
+var xhair=eval('document.'+_all+'xhair'+_style);
+var yhair=eval('document.'+_all+'yhair'+_style);
+var target=eval('document.'+_all+'target'+_style);
+
+function resize(){
+if(isNS){
+xhair.clip.width=window.innerWidth;
+xhair.clip.height=1;
+yhair.clip.width=1;
+yhair.clip.height=window.innerHeight;
+}else{
+xhair.width=document.body.clientWidth;
+yhair.height=document.body.clientHeight;
+}}
+
+function movehair(evnt){
+if(isNS){
+xhair.moveTo(pageXOffset,evnt.pageY);
+yhair.moveTo(evnt.pageX,pageYOffset);
+target.moveTo(evnt.pageX-20,evnt.pageY-20);
+}else{
+xhair.pixelTop=event.clientY+document.body.scrollTop;
+xhair.pixelLeft=document.body.scrollLeft;
+yhair.pixelLeft=event.clientX+document.body.scrollLeft;
+yhair.pixelTop=document.body.scrollTop;
+target.pixelTop=event.clientY+document.body.scrollTop-20;
+target.pixelLeft=event.clientX+document.body.scrollLeft-20;
+}
+return false;
+}
+
+function reloadNS(){
+setTimeout('window.location.reload()', 500);
+}
+
+(isNS)? window.onresize=reloadNS : window.onresize=resize;
+
+if(isNS)document.captureEvents(Event.MOUSEMOVE);
+document.onmousemove=movehair;
+
+window.onload=resize;
+
+</SCRIPT>
+
+<div align="center">
+	<table border="1" width="800" bordercolor="#C0C0C0" id="table1" style="border-collapse: collapse">
+		<tr>
+			<td width="798" height="28">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="HR%20consultation_03.htm" style="text-decoration: none">
+			<font size="2" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp; </font></a>
+			<font size="2">
+			<a target="_blank" href="HR%20consultation_03.htm" style="text-decoration: none">
+			<font color="#000000">培训课件</font></a>模块构成</font></td>
+		</tr>
+		<tr>
+			<td width="798">
+	<map name="FPMap0">
+	<area target="_blank" alt="高效团队    通过天慕众和特有的团队模型和测评工具对团队进行评估后，根据评估结果有针对性地帮助团队成员解决团队存在的问题，从而提高团队绩效。" coords="567, 178, 620, 212" shape="rect" href="trainning_03.htm#高效团队">
+	<area target="_blank" alt="团队技巧    紧密结合客户的需求，通过和客户的互动，做体验式培训，使参训者学会解决问题、建立信任及其他关键团队建设技巧。" coords="639, 186, 690, 219" shape="rect" href="trainning_03.htm#团队技巧">
+	<area target="_blank" alt="团队建设    为不同的团队量身定做的，通过解决团队中经常遇到的诸如沟通、冲突解决及目标不一致等问题，提高团队凝聚力，从而达到高绩效团队的目标。" coords="699, 222, 751, 256" shape="rect" href="trainning_03.htm#团队建设">
+	<area target="_blank" alt="沟通培训    介绍不同的沟通风格及如何与不同风格的人员进行有效沟通的培训。" href="trainning_03.htm#沟通培训" shape="rect" coords="714, 273, 766, 306">
+	<area target="_blank" alt="面试技巧培训    学习从应聘者中有效地甄别出有成功潜质的人选的技巧。包括：有效地获得有价值信息的方法、学会使用行为描述式问题从而获取更有价值的信息的方法、如何挖掘难以获得的信息的方法、分析面试结果并做出正确选择的方法等。" href="trainning_03.htm#面试技巧培训" shape="rect" coords="725, 321, 775, 352">
+	<area target="_blank" alt="培训培训师    帮助内部培训师设计系统的培训并提升培训技巧。" href="trainning_03.htm#培训培训师" shape="rect" coords="724, 371, 776, 404">
+	<area target="_blank" alt="激励培训    基于先进的激励理论，对参训者进行阶梯性的培训，提升参训者激励团队或个体员工的技巧。" href="trainning_03.htm#激励培训" shape="rect" coords="578, 481, 629, 515">
+	<area target="_blank" alt="冲突管理培训    教授寻找个人或团队之间冲突的根本原因及有效解决冲突的方法。" href="trainning_03.htm#冲突管理培训" shape="rect" coords="492, 472, 543, 505">
+	<area target="_blank" alt="团队领导力    通过授课、讨论、角色扮演及其他培训方式，关注团队领导经常面对的问题，帮助参训者学会有效地领导团队。" href="trainning_03.htm#团队领导力" shape="rect" coords="404, 264, 458, 296">
+	<area target="_blank" alt="领导力开发    通过反馈式培训，帮助中高层管理人员提升领导能力和培养创造力和持续学习的能力。（可为个人一对一辅导，也可为团队培训）" href="trainning_03.htm#领导力开发" shape="rect" coords="402, 325, 459, 357">
+	<area target="_blank" alt="领导技巧培训    通过诸如沟通、影响力、领导意识、关系管理及冲突处理等技巧的培训，帮助管理者提高领导技巧，形成有效的领导力。" href="trainning_03.htm#领导技巧培训" shape="rect" coords="410, 383, 468, 415">
+	<area target="_blank" alt="多元化员工管理    帮助参训者提升对不同特征如年龄、性别、个性的下属的管理技巧的培训。" href="trainning_03.htm#多元化员工管理" shape="rect" coords="426, 206, 480, 239">
+	<area target="_blank" alt="国际化文化管理    中国和其他地区文化的差异性带来的沟通及工作方式差异，以及解决办法的培训。" href="trainning_03.htm#国际化文化管理" shape="rect" coords="490, 183, 547, 216">
+	<area target="_blank" alt="多元化培训族      国际化文化管理,多元化员工管理" href="trainning_03.htm#多元化培训族" shape="circle" coords="527, 288, 47">
+	<area target="_blank" alt="团队培训族      高效团队,团队建设,团队技巧" href="trainning_03.htm#团队培训族" shape="circle" coords="639, 289, 46">
+	<area target="_blank" alt="领导力培训族      领导力开发,领导技巧培训,团队领导力" href="trainning_03.htm#领导力培训族" shape="circle" coords="528, 400, 46">
+	<area target="_blank" alt="管理培训族      沟通培训,冲突管理培训,激励培训,面试技巧培训,培训培训师" href="trainning_03.htm#管理培训族" shape="circle" coords="639, 398, 47">
+	</map>
+	<img border="0" src="images/trainning%20800x580.jpg" width="800" height="580" usemap="#FPMap0"></td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

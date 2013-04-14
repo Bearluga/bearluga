@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5, CSS3 and jQuery Navigation menu</title>
+		<link rel="stylesheet" href="../css/nav - Copy-original.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body class="no-js">
+		<nav id="topNav">
+	        	<ul>
+       		     	<li><a href="#" title="Nav Link 1">首页</a></li>
+					<li><a href="#" title="Nav Link 2">业务范畴</a>
+						<ul>
+                    	<li><a href="#" title="Sub Nav Link 1">人力资源咨询</a></li>
+						<li><a href="#" title="Sub Nav Link 2">培训</a></li>
+						<li class="last"><a href="#" title="Sub Nav Link 3">评估</a></li>
+                    	</ul>
+					</li>
+				<li><a href="#" title="Nav Link 1">核心产品</a></li>
+				<li><a href="#" title="Nav Link 1">咨询团队</a></li>
+				<li><a href="#" title="Nav Link 1">最新消息</a></li>
+                <li><a href="#" title="Nav Link 1">在线测评</a></li>
+                <li><a href="#" title="Nav Link 1">留言板</a></li>
+			</ul>
+		</nav>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/modernizr.js"></script>
+        
+        		<script>
+
+			(function($){
+
+				
+
+				//cache nav
+
+				var nav = $("#topNav");
+
+				
+
+				//add indicator and hovers to submenu parents
+
+				nav.find("li").each(function() {
+
+					if ($(this).find("ul").length > 0) {
+
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+
+
+						//show subnav on hover
+
+						$(this).mouseenter(function() {
+
+							$(this).find("ul").stop(true, true).slideDown();
+
+						});
+
+						
+
+						//hide submenus on exit
+
+						$(this).mouseleave(function() {
+
+							$(this).find("ul").stop(true, true).slideUp();
+
+						});
+
+					}
+
+				});
+
+			})(jQuery);
+
+		</script>
+
+        
+	</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>About Us</title>
+<link rel="stylesheet" type="text/css" href="anylinkmenu.css" />
+<script type="text/javascript" src="menucontents.js"></script>
+<script src="jquery-1.7.1.js" type="text/javascript"></script>
+<script type="text/javascript" src="anylinkmenu.js"></script>
+<script src="functions.js" type="text/javascript"></script> 
+</head>
+<body>
+ <div class="wrapper">
+	<div class="container">
+	<div id = "menu">
+		<script>
+			$('#menu').load('header.html');
+		</script>
+	</div>
+ <div id="maincontent">
+    <img src="picture/bg.gif" id="bg"/>
+    
+	<div class = "tabbed_area">
+		<div id = "switch">
+			<ul class = "tabs">
+    			<li><p><a href="javascript:tabSwitch('tab_1', 'content_1')" title = "About us"id="tab_1" class ="active">About Us</a></p></li>
+        		<li><p><a href="javascript:tabSwitch('tab_2', 'content_2')" title = "See price" id="tab_2">Price</a></p></li>
+    		</ul>
+    	</div>
+        
+	  <div id = "slide">
+	    <div id = "content1" class= "content"><h2> No.18 KTV &amp; BUBBLE TEA</h2>
+       		  <p>Introduction here...<br />
+       		  Tel: 319-333-1265/1267<br />
+       		  223 S.Gilbert St.Iowa City</p>      
+       	  </div>
+        
+   		  <div id = "content2" class= "content">
+       		  <table id="table-design">
+				<thead>
+					<th>Room Size</th>
+					<th>Maximum Capacity </th>
+					<th>Happy Hours</th>
+					<th>Regular Hours</th>
+				</thead>
+				<tbody>
+				<tr>
+					<td>SMALL</td>
+					<td>4 People</td>
+					<td>$20/Hour</td>
+					<td>$30/Hour</td>
+				</tr>
+					<tr>
+					<td>MEDIUM</td>
+					<td>8 People</td>
+					<td>$38/Hour</td>
+					<td>$48/Hour</td>
+				</tr>
+				<tr>
+					<td>LARGE</td>
+					<td>15 People</td>
+					<td>$48/Hour</td>
+					<td>$58/Hour</td>
+				</tr>
+				</tbody>
+			</table>
+       </div><!--end content 2-->
+	</div><!--end slide-->
+</div><!--end tabbed_area-->
+
+ </div>
+
+  <!-- end .container --></div>
+<div class="push"></div></div>
+	<div id="footer">
+    	<script>
+	$('#footer').load('footer.html');
+	</script>
+    </div>
+
+</script>
+	<script>//main picture fade in
+	$(document).ready(function(){
+		$("#maincontent").fadeIn('slow');
+ 	});
+
+//begins  
+  $(document).ready(function() {
+	var $opa;
+	var $cont1 = $('#content1');
+	var $cont2 = $('#content2');
+	
+	$("#tab_2").fadeTo('fast', 0.4);
+	$("#tab_1").fadeTo('fast', 1);
+	
+    $('#tab_2').click(
+  	function() {
+  	  	$cont1.animate({
+  	    	left: parseInt($cont1.css('left'),10) == 0 ?  -$cont1.outerWidth() :  -$cont1.outerWidth()
+		},"300",function(){
+			$cont2.animate({
+  	    	left: parseInt($cont2.css('left'),10) == 0 ?  0 : 0
+			});
+			$("#tab_1").stop().fadeTo(300,0.4);
+			$("#tab_2").stop().fadeTo("fast",1.0);
+			$opa = 1;
+	  });
+	});//end click tab_2
+	  
+	$('#tab_1').click(
+  	function(){
+  	  	$cont2.animate({
+  	    	left: parseInt($cont2.css('left'),10) == 0 ?  -$cont2.outerWidth() :   -$cont2.outerWidth()
+		},"300",function(){
+			$cont1.animate({
+  	    	left: parseInt($cont1.css('left'),10) == 0 ?  0 : 0
+			});
+			$("#tab_2").stop().fadeTo(300,0.4);	
+			$("#tab_1").stop().fadeTo("fast",1.0);
+			$opa = 1;
+	  });
+	});// end click tab_1
+
+
+$("#tab_2").hover(function(){
+	$opa = $(this).css("opacity");
+	$(this).stop().fadeTo('fast', 1);
+}, function(){
+	if ($opa < 0.45) {$(this).stop().fadeTo(1000, 0.4);}
+});
+	
+$("#tab_1").hover(function(){
+	$opa = $(this).css("opacity");
+	$(this).stop().fadeTo('fast', 1);
+}, function(){
+	if ($opa < 0.45) {$(this).stop().fadeTo(1000, 0.4);}
+});
+
+	
+	});//end document.ready
+    </script> 
+    <script>
+</script>
+</body>
+</html>

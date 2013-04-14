@@ -1,0 +1,327 @@
+* {
+padding: 0;
+margin: 0;
+}
+
+body{
+	color: #CCC;
+}
+
+html {
+	background:url(picture/bodybg2.jpg) 	no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+a{
+	outline: none;
+}
+
+html, body {
+height: 100%;
+}
+
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -29px;
+}
+
+
+.push {
+	height: 29px;
+}
+
+
+.container{
+padding-top:59px;
+padding-bottom: 20px;
+}
+
+.bold{
+	font-weight:bold;
+}
+
+#footer{
+	height:20px;
+	padding-top: 8px;
+/*	padding: 4px;
+*/	text-align:center;
+	font-family:"Verdana", "Geneva", sans-serif;
+	font-size:9px;
+	background-color:#1C1C1C;
+	border-top:1px silver solid;
+}
+
+#mainpicture{
+	width:100%;
+	display:none;
+}
+
+#maincontent{
+	display:none;
+}
+
+/* ######### Default class for drop down menus ######### */
+
+.anylinkmenu{
+	margin-left:0;
+	position:fixed;
+	top: 59px;
+	font: normal 12px Verdana;
+	line-height: 18px;
+	z-index: 100; /* zIndex should be greater than that of shadow's below */
+	visibility: hidden;
+	width: 100%; /* default width for menu */
+	background-color:#1C1C1C;
+}
+
+.anylinkmenu ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align:left;
+}
+
+.anylinkmenu ul li a{
+width: 100%;
+display: block;
+text-indent: 3px;
+padding: 3px 0;
+text-decoration: none;
+font-weight: bold;
+text-indent: 5px;
+color: silver;
+font: 14px "impact", sans-serif;
+}
+
+.anylinkmenu a:hover{ /*hover background color*/
+color: white;
+}
+
+/* ######### class for shadow DIV ######### */
+
+.anylinkshadow{ /*CSS for shadow. Keep this as is */
+position: absolute;
+left: 0;
+top: 0;
+z-index: 99; /*zIndex for shadow*/
+background: white;
+visibility: hidden;
+}
+
+
+/* my rules*/
+/* Navigation Menu info: 
+  logo : W 0-120px H90px
+*/
+.navigation a {
+	text-decoration: none;	
+	text-transform:uppercase;
+	font: 14px "impact", sans-serif;
+}
+
+li.navigation{
+	display:inline;	
+	width:100px;
+	text-align:center;
+	float:left;
+	padding: 21px 0px;
+}
+
+#menu{
+	padding-left:125px;
+	width:100%;
+	background-color:#1C1C1C;
+	background-image:url('logo.gif');
+	background-repeat:no-repeat;
+	position:fixed;
+	left:0;
+	top:0;
+}
+
+#menu ul{
+list-style-type:none;
+margin:0 auto;
+display:block;
+}
+
+#menu ul li a:link, #menu ul li a:visited, #menu ul li a:active{
+color:silver;
+}
+
+#menu ul li a:hover{
+	color:white;
+}
+
+/*About us*/
+#bg{
+	position:absolute;
+	z-index:-1;
+	left: -49px;
+	top: 112px;
+}
+
+.tabbed_area{
+	width:850px;
+	height:200px;	
+	margin-top:150px;
+	margin-left: 290px;
+}
+
+#switch{
+ width: 85px;
+ float:left;
+ padding-top: 15px;
+ padding-right: 10px;
+}
+
+#switch ul{
+	list-style:none;
+	text-align:right;
+}
+#switch ul li a{
+	padding-left:3px;
+	margin-right: -9px;
+	text-decoration: none;
+	background-image:url(picture/botton3.gif);
+	border:1px ridge black;
+/*	background-repeat:repeat-x;*/
+}
+
+.tabbed_area{
+	padding:8px;
+}
+
+ul.tabs li a {
+	color:silver;
+	font-size: 18px;
+	text-decoration:none;
+	text-transform:uppercase;
+	padding-bottom: 5px;
+	margin-bottom::10px;
+}
+#switch ul li a:hover,#switch ul li a:hover{
+	color:white;
+/*	background-repeat:repeat-x;*/
+}
+
+ul.tabs li a.active {  
+    color:white;  
+} 
+
+.tabbed_area{
+	line-height: 1.2em;
+	font: 16px "impact", sans-serif;
+}
+
+.tabbed_area th
+{
+	border-bottom:1px dotted silver;
+	height: 30px;
+	width: 150px;
+	padding: 5px 15px;
+	font-weight: 400;
+}
+.tabbed_area td{
+height:20px;
+padding: 5px;	
+}
+
+.content{
+	padding:10px;
+}
+
+#slide{
+	overflow: hidden;
+	/*border:1px yellow solid;*/
+	height:400px;
+	position:relative;
+}
+
+.tabs li{
+	padding-bottom: 15px;
+}
+
+
+#content1, #content2{
+	top:0;
+	left:0;
+	color:white;
+	position:absolute;
+	height: 155px;
+	width:600px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#content2{	
+padding-right:0px;
+background-image:url(picture/content2bg.png);
+}
+#content1{
+	border:black 2px ridge;
+	background-image:url(picture/contentbg.png);
+}
+table
+{
+	margin-top:-8px;
+	margin-left:-15px;
+	border-collapse:collapse;
+	height:173px;
+}
+
+#table-design tr{
+	background-image:url(picture/content2-bg.png);
+}
+
+#content1 h2{
+	margin-top: -10px;
+	margin-bottom: 10px;
+	padding-left: 30px;
+	padding-right:185px;	
+	border-bottom: 1px silver dotted;	
+}
+
+#content1 p{
+	padding-left: 30px;	
+	padding-right: 350px;
+	line-height:200%;	
+}
+
+#content2{
+	left:-890px;
+	text-align:center;
+}
+
+#content2 th{
+	font-weight:bold;
+	padding-top:15px;
+}
+
+/*Menu*/
+.enname{
+font-style:italic;	
+}
+.ingredient{
+	font-style:italic;
+}
+#menu18{
+	font-family:"Comic Sans MS", cursive;
+	text-align:center;	
+	padding:5px;
+	width: 650px;
+	margin:15px auto;
+}
+#menu18 h2{
+	color:red;
+	padding:5px 0;
+	border-bottom:1px dotted red;
+	border-top:1px dotted red;
+	width:auto;
+	margin:15px;
+}
+#menu18 p{
+	line-height:200%;
+}
