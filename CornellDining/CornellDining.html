@@ -34,6 +34,17 @@
       border-radius: 5px;
       border:1px solid gray;
     }
+    .ios{
+      font-size: 20px;
+      color: silver;
+      text-shadow : 0px 1px 0 #444;
+    }
+    .Android{
+      font-size: 20px;
+      color: green;
+      font-weight: bold;
+    }
+
   </style>
 </head>
 <body>
@@ -42,10 +53,19 @@
 
 <div class="step">
   <table><tr>
-    <td class="instructions">Install the<br />Cornell Dining app</td>
+    <td class="instructions" style="border-bottom: 1px dotted silver;">Install <b>Cornell Dining</b> app on <span class="ios">iOS</span></td>
+    <td width="24" class="arrow" style="border-bottom: 1px dotted silver;">&rarr;</td>
+    <td width="57" class="imagelink" style="border-bottom: 1px dotted silver;">
+      <a href="itms-services://?action=download-manifest&url=http://www.bearluga.com/CornellDining/CornellDining.plist">
+        <img src="CornellDining.png" height="57" width="57" />
+      </a>
+    </td>
+  </tr>
+    <tr>
+    <td class="instructions">Install <b>Cornell Dining</b> app for <span class="Android">Android</span></td>
     <td width="24" class="arrow">&rarr;</td>
     <td width="57" class="imagelink">
-      <a href="itms-services://?action=download-manifest&url=http://www.bearluga.com/CornellDining/CornellDining.plist">
+      <a href="CornellDining-debug.apk">
         <img src="CornellDining.png" height="57" width="57" />
       </a>
     </td>
